@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE:8082
-ADD target/Jenkins-automation.jar Jenkins-automation.jar
-ENTRYPOINT ["java","-jar","/Jenkins-automation.jar"]
+ADD target/jenkins-automation.jar jenkins-automation.jar
+ENTRYPOINT ["java","-jar","/jenkins-automation.jar"]
