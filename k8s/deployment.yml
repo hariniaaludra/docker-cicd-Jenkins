@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8-service-dummy
+  namespace: project1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8-service-dummy
+  template:  # Moved template section outside of selector
+    metadata:
+      labels:
+        app: k8-service-dummy
+    spec:
+      containers:
+        - name: spring-k8s-demo
+          image: rtppoc/spring-k8s
+          imagePullPolicy: Never
